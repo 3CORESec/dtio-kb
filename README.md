@@ -1,5 +1,13 @@
-# dtio-kb
-Client and Researcher resources for dtection.io
+# dtection.io KB
+Client and Researcher resources for [dtection.io](https://dtection.io)
+
+# Client
+
+While a simple visit of your unique URL is sufficient to download the latest version of your purchased rulesets, we've developed some additional scripts and tools to ease in the process or to help you automate its retrieval.
+
+## Windows Client
+## Linux Script
+## CI/CD Standalone Updater
 
 # Researcher
 
