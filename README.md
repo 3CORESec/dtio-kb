@@ -3,6 +3,8 @@ Client and Researcher resources for dtection.io
 
 # Researcher
 
+Please visit the [Researcher Area](https://dtection.io/developers) for additional information on selling your research in dtection.io.
+
 ## Github Actions
 
 The recommended way of updating the rules you maintain in dtection.io is by leveraging an automatic update process. This allows you to keep your work in a repository and CI/CD will take over and perform the required actions for its publication. 
