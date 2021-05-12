@@ -55,4 +55,4 @@ jobs:
 
 You'll receive information on your home folder during onboarding.
 
-That's all there is to it. Simply keep your rules or signatures updated as part of your workflow and all updates will find their way into dtection.io.
+That's all there is to it. Simply keep your rules or signatures updated as part of your workflow and all updates will find their way into dtection.io. If you're working on something that you'd like to keep private while it is in progress, simple write `ci skip` in the commit message or work with branches.
