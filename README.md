@@ -1,8 +1,8 @@
 <img align="right" src="https://dtection.io/logo.png">
 
-# dtection.io KB
+# dtection.io knowledge base
 
-This project provides additional information, scripts and applications, for both users and researchers of [dtection.io](https://dtection.io), our detection capablities marketplace.
+This project provides information, scripts and applications *(for both users and researchers)* of [dtection.io](https://dtection.io), [3CORESec's](https://3coresec.com) detection capablities marketplace.
 
 # Client/User
 
