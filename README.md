@@ -1,12 +1,18 @@
 # dtection.io KB
-Client and Researcher resources for [dtection.io](https://dtection.io)
 
-# Client
+This project provides additional information, scripts and applications, for both users and researchers of [dtection.io](https://dtection.io), our detection capablities marketplace.
+
+# Client/User
 
 While a simple visit of your unique URL is sufficient to download the latest version of your purchased rulesets, we've developed some additional scripts and tools to ease in the process or to help you automate its retrieval.
 
-## Windows Client
 ## Linux Script
+
+The GNU/Linux script can be found here: [client/linux/](./client/linux)
+
+## Windows Client
+Standalone Windows client will be released soon!
+
 ## CI/CD Standalone Updater
 
 # Researcher
@@ -24,35 +30,8 @@ If you'd like to use this method you'll have to start by creating two "Secrets" 
 - AWS_SECRET_ACCESS_KEY
   - You'll receive this information during onboarding
 
-After creating the secrets, simply create an Action with the following:
+After creating the secrets, simply create a new Action as per the example: [researcher/cicd/](./researcher/cicd/)
 
-```
-on:
-  push:
-    branches:
-      - master
-
-jobs:
-  deploy:
-    name: Deploy my rules to dtection.io
-    runs-on: ubuntu-latest
-    if: "!contains(github.event.head_commit.message, 'ci skip')"
-
-    steps:
-    - name: Checkout
-      uses: actions/checkout@v2
-
-    - name: Configure AWS credentials
-      uses: aws-actions/configure-aws-credentials@v1
-      with:
-        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        aws-region: eu-central-1
-
-    - name: Copy signatures file to the appropriate S3 location
-      run: aws s3 cp YOUR_FILE s3://dtection-dtection-sd2tk9bxr3z3/YOUR_FOLDER/
-```
-
-You'll receive information on your home folder during onboarding.
+All the information required to create your workflow will be provided during the onbard process (home folder & access keys).
 
 That's all there is to it. Simply keep your rules or signatures updated as part of your workflow and all updates will find their way into dtection.io. If you're working on something that you'd like to keep private while it is in progress, simple write `ci skip` in the commit message or work with branches.
