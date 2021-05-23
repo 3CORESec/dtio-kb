@@ -15,19 +15,18 @@ Standalone Windows client will be released soon!
 
 ## CI/CD Standalone Updater
 
-# Researcher
+# Researchers
 
 Please visit the [Researcher Area](https://dtection.io/developers) for additional information on selling your research in dtection.io.
+
+**Note:** The only supported action when uploading content to dtection.io is write/overwrite within your home folder. All other actions *(listing, reading, etc)* will fail. All researchers are limited to their own distribution folder *(one per subscription)*.
 
 ## Github Actions
 
 The recommended way of updating the rules you maintain in dtection.io is by leveraging an automatic update process. This allows you to keep your work in a repository and CI/CD will take over and perform the required actions for its publication. 
 
-If you'd like to use this method you'll have to start by creating two "Secrets" in your repository Settings:
+CI/CD example configuration: [researcher/cicd/](./researcher/cicd/)
 
-- AWS_ACCESS_KEY_ID
-  - You'll receive this information during onboarding
-- AWS_SECRET_ACCESS_KEY
-  - You'll receive this information during onboarding
+## Local upload
 
-After creating the secrets, simply create a new Action as per the example: [researcher/cicd/](./researcher/cicd/)
+If you'd like to run the upload process directly from your machine the only requirement is that you have [awscli installed](https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2.html) and configured with the access keys you received during the onboarding process. 
