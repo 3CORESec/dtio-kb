@@ -8,6 +8,10 @@ This project provides information, scripts and applications *(for both users and
 
 While a simple visit of your unique URL is sufficient to download the latest version of your purchased rulesets, we've developed some additional scripts and tools to ease in the process or to help you automate its retrieval.
 
+These tools all rely on a basic principle: an .md5 file that is automatically generated when a researcher performs an update on their subscription. If the MD5 hash has changed, the application or script will request a new version of the file.
+
+Any user can download this .md5 by adding `.md5` to the end of the unique URL that was received at the time of the purchase.
+
 ## Linux Script
 
 The GNU/Linux script can be found here: [client/linux/](./client/linux)
