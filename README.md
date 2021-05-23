@@ -2,7 +2,7 @@
 
 # dtection.io knowledge base
 
-This project provides information, scripts and applications *(for both users and researchers)* of [dtection.io](https://dtection.io), our detection capablities marketplace.
+This project provides information, scripts and applications *(for both users and researchers)* to interact with [dtection.io](https://dtection.io), our detection capabilities marketplace.
 
 # Client/User
 
