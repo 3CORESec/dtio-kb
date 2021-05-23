@@ -21,11 +21,11 @@ if [ -f "$TEMP_FOLDER/$FILE.md5" ]; then
         wget -q -O $TEMP_FOLDER/$FILE.md5.upstream $URL
         if ! cmp $TEMP_FOLDER/$FILE.md5.upstream $TEMP_FOLDER/$FILE.md5
         then
-                echo -e "Mismatch between local copy and upstream. Downloading new content from dtection.io\n"
+                echo -e "Mismatch between local copy and upstream. Downloading new content from dtection.io.\n"
                 wget -O $DOWN_FOLDER/$FILE $URL
                 exit 0
         else
-                echo -e "Hashes are identical. Will not request an update from dtection.io\n"
+                echo -e "Hashes are identical. Will not request an update from dtection.io.\n"
                 exit 0
         fi
 else
