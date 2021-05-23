@@ -19,8 +19,6 @@ The GNU/Linux script can be found here: [client/linux/](./client/linux)
 ## Windows Client
 Standalone Windows client will be released soon!
 
-## CI/CD Standalone Updater
-
 # Researchers
 
 Please visit the [Researcher Area](https://dtection.io/developers) for additional information on selling your research in dtection.io.
