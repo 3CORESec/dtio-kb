@@ -8,5 +8,5 @@ The purpose of this script is to demonstrate how you can interact with the dtect
 
 Add your subscription URL to the script and execute it. You can also pass the subscription URL as a parameter. 
 
-Standalone: `./dtio-update`
-Parameter: `./dtio.update https://rules.dtection.io/ruleset/3cs_lateral/YOUR_KEY/dtio-tgi-lateral.rules`
+* Standalone: `./dtio-update`
+* Parameter: `./dtio.update https://rules.dtection.io/ruleset/3cs_lateral/YOUR_KEY/dtio-tgi-lateral.rules`
