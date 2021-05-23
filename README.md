@@ -2,7 +2,7 @@
 
 # dtection.io knowledge base
 
-This project provides information, scripts and applications *(for both users and researchers)* of [dtection.io](https://dtection.io), [3CORESec's](https://3coresec.com) detection capablities marketplace.
+This project provides information, scripts and applications *(for both users and researchers)* of [dtection.io](https://dtection.io), our detection capablities marketplace.
 
 # Client/User
 
