@@ -31,7 +31,3 @@ If you'd like to use this method you'll have to start by creating two "Secrets" 
   - You'll receive this information during onboarding
 
 After creating the secrets, simply create a new Action as per the example: [researcher/cicd/](./researcher/cicd/)
-
-All the information required to create your workflow will be provided during the onbard process (home folder & access keys).
-
-That's all there is to it. Simply keep your rules or signatures updated as part of your workflow and all updates will find their way into dtection.io. If you're working on something that you'd like to keep private while it is in progress, simple write `ci skip` in the commit message or work with branches.
