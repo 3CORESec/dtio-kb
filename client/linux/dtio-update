@@ -19,6 +19,8 @@ fi
 # Script variables
 FILE=$(echo $URL | sed 's/.*\///')
 
+# Start script
+
 echo -e "dtection.io update checker:\n"
 echo "Subscription file: $(echo $FILE)"
 echo -e "Update hash file: $(echo $FILE.md5)\n"
