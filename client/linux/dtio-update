@@ -23,7 +23,7 @@ echo -e "dtection.io update checker:\n"
 echo "Subscription file: $(echo $FILE)"
 echo -e "Update hash file: $(echo $FILE.md5)\n"
 
-# Check if the MD5 file is already in /tmp/ or if this is a new download
+# Check if the MD5 file is already in the temporary folder or if this is a new download
 # You can change both the temporary folder as well as folder for the download
 
 TEMP_FOLDER=/tmp
