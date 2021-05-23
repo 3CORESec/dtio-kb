@@ -1,7 +1,20 @@
 #!/bin/bash
 
-# PLEASE ENTER THE FULL URL YOU RECEIVED VIA EMAIL BELOW
+# PLEASE ADD TO THE URL VARIABLE THE URL YOU RECEIVED VIA EMAIL
+# YOU CAN ALSO PASS IT AS AN ARGUMENT WHEN EXECUTING THE SCRIPT
+
 URL=
+
+# Determine if user is using parameter or hardcoded varible
+if [ -z "$1" ]; then
+  if [ -z "$URL" ]; then
+    echo -e "\nURL was not given as a parameter nor defined within the script. Exiting."
+    echo ""
+    exit 1
+  fi
+  else
+    URL=$1
+fi
 
 # Script variables
 FILE=$(echo $URL | sed 's/.*\///')
@@ -17,20 +30,21 @@ TEMP_FOLDER=/tmp
 DOWN_FOLDER=/tmp
 
 if [ -f "$TEMP_FOLDER/$FILE.md5" ]; then
-        echo -e "MD5 file for the subscription is present. Perforing comparison with upstream.\n"
-        wget -q -O $TEMP_FOLDER/$FILE.md5.upstream $URL
-        if ! cmp $TEMP_FOLDER/$FILE.md5.upstream $TEMP_FOLDER/$FILE.md5
-        then
-                echo -e "Mismatch between local copy and upstream. Downloading new content from dtection.io.\n"
-                wget -O $DOWN_FOLDER/$FILE $URL
-                exit 0
-        else
-                echo -e "Hashes are identical. Will not request an update from dtection.io.\n"
-                exit 0
-        fi
+  echo -e "MD5 file for the subscription is present. Perforing comparison with upstream.\n"
+  wget -q -O $TEMP_FOLDER/$FILE.md5.upstream $URL
+  if ! cmp $TEMP_FOLDER/$FILE.md5.upstream $TEMP_FOLDER/$FILE.md5
+    then
+      echo -e "Mismatch between local copy and upstream. Downloading new content from dtection.io\n"
+      wget -O $DOWN_FOLDER/$FILE $URL
+      exit 0
+  else
+    echo -e "Hashes are identical. Will not request an update from dtection.io\n"
+    exit 0
+  fi
 else
-        echo -e "MD5 file for the subscription does not exist. Downloading new content from dtection.io.\n"
-        wget -O $DOWN_FOLDER/$FILE $URL
-        wget -q -O $DOWN_FOLDER/$FILE.md5 $URL
-        exit 0
+  echo -e "MD5 file for the subscription does not exist. Downloading new content from dtection.io.\n"
+  wget -O $DOWN_FOLDER/$FILE $URL
+  wget -q -O $DOWN_FOLDER/$FILE.md5 $URL
+  exit 0
 fi
+exit 0
