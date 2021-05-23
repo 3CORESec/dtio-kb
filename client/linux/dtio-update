@@ -1,0 +1,36 @@
+#!/bin/bash
+
+# PLEASE ENTER THE FULL URL YOU RECEIVED VIA EMAIL BELOW
+URL=
+
+# Script variables
+FILE=$(echo $URL | sed 's/.*\///')
+
+echo -e "dtection.io update checker:\n"
+echo "Subscription file: $(echo $FILE)"
+echo -e "Update hash file: $(echo $FILE.md5)\n"
+
+# Check if the MD5 file is already in /tmp/ or if this is a new download
+# You can change both the temporary folder as well as folder for the download
+
+TEMP_FOLDER=/tmp
+DOWN_FOLDER=/tmp
+
+if [ -f "$TEMP_FOLDER/$FILE.md5" ]; then
+        echo -e "MD5 file for the subscription is present. Perforing comparison with upstream.\n"
+        wget -q -O $TEMP_FOLDER/$FILE.md5.upstream $URL
+        if ! cmp $TEMP_FOLDER/$FILE.md5.upstream $TEMP_FOLDER/$FILE.md5
+        then
+                echo -e "Mismatch between local copy and upstream. Downloading new content from dtection.io\n"
+                wget -O $DOWN_FOLDER/$FILE $URL
+                exit 0
+        else
+                echo -e "Hashes are identical. Will not request an update from dtection.io\n"
+                exit 0
+        fi
+else
+        echo -e "MD5 file for the subscription does not exist. Downloading new content from dtection.io.\n"
+        wget -O $DOWN_FOLDER/$FILE $URL
+        wget -q -O $DOWN_FOLDER/$FILE.md5 $URL
+        exit 0
+fi
