@@ -1,3 +1,5 @@
+<img align="right" src="https://dtection.io/logo.png">
+
 # dtection.io KB
 
 This project provides additional information, scripts and applications, for both users and researchers of [dtection.io](https://dtection.io), our detection capablities marketplace.
