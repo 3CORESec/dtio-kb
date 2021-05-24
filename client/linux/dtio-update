@@ -38,6 +38,7 @@ if [ -f "$TEMP_FOLDER/$FILE.md5" ]; then
     then
       echo -e "Mismatch between local copy and upstream. Downloading new content from dtection.io\n"
       wget -O $DOWN_FOLDER/$FILE $URL
+      mv $TEMP_FOLDER/$FILE.md5.upstream $TEMP_FOLDER/$FILE.md5
       exit 0
   else
     echo -e "Hashes are identical. Will not request an update from dtection.io\n"
