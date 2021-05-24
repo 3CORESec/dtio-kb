@@ -23,8 +23,6 @@ Standalone Windows client will be released soon!
 
 Please visit the [Researcher Area](https://dtection.io/developers) for additional information on selling your research in dtection.io.
 
-**Note:** The only supported action when uploading content to dtection.io is write/overwrite within your home folder. All other actions *(listing, reading, etc)* will fail. All researchers are limited to their own distribution folder *(one per subscription)*.
-
 ## Github Actions
 
 The recommended way of updating the rules you maintain in dtection.io is by leveraging an automatic update process. This allows you to keep your work in a repository and CI/CD will take over and perform the required actions for its publication. 
