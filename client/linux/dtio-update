@@ -5,7 +5,7 @@
 
 URL=
 
-# Determine if user is using parameter or hardcoded varible
+# Determine if user is using parameter or hardcoded variable
 if [ -z "$1" ]; then
   if [ -z "$URL" ]; then
     echo -e "\nURL was not given as a parameter nor defined within the script. Exiting."
