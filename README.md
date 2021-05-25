@@ -17,7 +17,8 @@ Any user can download this MD5 hash by adding `.md5` to the end of the unique UR
 The GNU/Linux script can be found here: [client/linux/](./client/linux)
 
 ## Windows Client
-Standalone Windows client will be released soon!
+
+Self-contained Windows application can be found here: [client/windows/](./client/windows)
 
 # Researchers
 
