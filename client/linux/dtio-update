@@ -32,7 +32,7 @@ TEMP_FOLDER=/tmp
 DOWN_FOLDER=/tmp
 
 if [ -f "$TEMP_FOLDER/$FILE.md5" ]; then
-  echo -e "MD5 file for the subscription is present. Perforing comparison with upstream.\n"
+  echo -e "MD5 file for the subscription is present. Performing comparison with upstream.\n"
   wget -q -O $TEMP_FOLDER/$FILE.md5.upstream $URL
   if ! cmp $TEMP_FOLDER/$FILE.md5.upstream $TEMP_FOLDER/$FILE.md5
     then
