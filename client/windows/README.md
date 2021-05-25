@@ -1,6 +1,6 @@
 # Windows DTIO Updater
 
-**Application download:** [./dtio-update](https://raw.githubusercontent.com/3CORESec/dtio-kb/master/client/windows/dtio-update.exe)
+**Application download:** [./dtio-update.exe](https://raw.githubusercontent.com/3CORESec/dtio-kb/master/client/windows/dtio-update.exe)
 
 The purpose of this application is to demonstrate how you can interact with the dtection.io API. Feel free to change the script to your needs.
 
