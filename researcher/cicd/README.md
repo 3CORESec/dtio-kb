@@ -13,6 +13,8 @@ on:
   push:
     branches:
       - master
+    paths-ignore:
+      - '**/README.md'
 
 jobs:
   deploy:
